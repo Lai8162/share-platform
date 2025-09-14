@@ -1,0 +1,10 @@
+server:
+  port: 8008
+spring:
+  profiles:
+    active: dev
+  application:
+    name: share-platform
+
+logging:
+  config: classpath:log4j2.xml

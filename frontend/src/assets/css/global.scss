@@ -1,0 +1,5 @@
+$base-text-color: red;
+
+:root {
+  --base-text-color: #{$base-text-color};
+}
