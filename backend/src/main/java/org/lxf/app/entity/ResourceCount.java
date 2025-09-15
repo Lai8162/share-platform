@@ -5,7 +5,7 @@ import lombok.*;
 import org.lxf.app.entity.base.BaseTime;
 
 /**
- *  实体类。
+ * 资源计数
  *
  * @author lxf
  * @version 1.0

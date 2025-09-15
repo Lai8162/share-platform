@@ -5,7 +5,7 @@ import lombok.*;
 import org.lxf.app.entity.base.BaseAudit;
 
 /**
- *  实体类。
+ * 资源被操作详情
  *
  * @author lxf
  * @version 1.0
