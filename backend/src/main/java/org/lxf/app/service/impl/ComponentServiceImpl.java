@@ -8,7 +8,7 @@ import org.lxf.app.service.ComponentService;
 import org.springframework.stereotype.Service;
 
 /**
- * 组件API服务实现
+ * 组件API接口Service实现
  *
  * @author lxf
  * @version 1.0

@@ -5,7 +5,7 @@ import jakarta.servlet.http.HttpServletResponse;
 import jakarta.validation.Valid;
 import org.lxf.app.common.response.PageResponse;
 import org.lxf.app.common.response.Response;
-import org.lxf.app.form.*;
+import org.lxf.app.form.base.*;
 import org.lxf.app.transform.demo.UserDemo;
 import org.lxf.app.entity.User;
 import org.lxf.app.transform.vo.UserVO;
@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.io.IOException;
 
 /**
- * 用户API接口控制层
+ * 用户API接口Controller
  *
  * @author lxf
  * @version 1.0

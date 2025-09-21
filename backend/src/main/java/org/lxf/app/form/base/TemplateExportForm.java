@@ -1,4 +1,4 @@
-package org.lxf.app.form;
+package org.lxf.app.form.base;
 
 import lombok.Data;
 

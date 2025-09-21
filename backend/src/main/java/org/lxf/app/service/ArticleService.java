@@ -3,7 +3,7 @@ package org.lxf.app.service;
 import org.lxf.app.entity.Article;
 
 /**
- * 文章API服务
+ * 文章API接口Service
  *
  * @author lxf
  * @version 1.0

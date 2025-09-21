@@ -3,7 +3,7 @@ package org.lxf.app.service;
 import org.lxf.app.entity.ToDbRecord;
 
 /**
- * 解析sql记录API服务
+ * 解析sql记录API接口Service
  *
  * @author lxf
  * @version 1.0

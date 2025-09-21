@@ -5,7 +5,7 @@ import com.mybatisflex.annotation.Table;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.experimental.FieldNameConstants;
-import org.lxf.app.transform.demo.BaseDTOCastDemo;
+import org.lxf.app.transform.demo.base.BaseDTOCastDemo;
 import org.lxf.app.transform.demo.UserDemo;
 import org.lxf.app.entity.base.BaseTime;
 

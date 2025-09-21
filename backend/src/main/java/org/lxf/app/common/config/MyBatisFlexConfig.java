@@ -1,4 +1,4 @@
-package org.lxf.app.config;
+package org.lxf.app.common.config;
 
 import com.mybatisflex.core.audit.AuditManager;
 import lombok.extern.slf4j.Slf4j;

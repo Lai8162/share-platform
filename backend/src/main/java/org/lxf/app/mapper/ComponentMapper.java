@@ -11,5 +11,4 @@ import org.lxf.app.entity.Component;
  * @since 2025-09-14
  */
 public interface ComponentMapper extends BaseMapper<Component> {
-
 }

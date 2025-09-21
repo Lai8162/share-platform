@@ -17,8 +17,8 @@ import org.lxf.app.common.exception.BusinessException;
 import org.lxf.app.common.response.DeleteResponse;
 import org.lxf.app.common.util.FieldNameUtil;
 import org.lxf.app.common.util.StringUtil;
-import org.lxf.app.form.*;
-import org.lxf.app.transform.demo.BaseDTOCastDemo;
+import org.lxf.app.form.base.*;
+import org.lxf.app.transform.demo.base.BaseDTOCastDemo;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.io.IOException;

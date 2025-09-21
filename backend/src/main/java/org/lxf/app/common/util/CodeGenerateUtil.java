@@ -22,7 +22,7 @@ public class CodeGenerateUtil {
         dataSource.setPassword("root");
 
         //创建配置内容，两种风格都可以。
-        GlobalConfig globalConfig = create("article", "component", "resource_count", "resource_operated_detail", "to_db_record", "user");
+        GlobalConfig globalConfig = create("code_share", "code_type", "technical_version_feature_share", "technical_version_feature_type");
 
         //通过 datasource 和 globalConfig 创建代码生成器
         Generator generator = new Generator(dataSource, globalConfig);

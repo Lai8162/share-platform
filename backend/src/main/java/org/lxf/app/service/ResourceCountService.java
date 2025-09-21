@@ -3,7 +3,7 @@ package org.lxf.app.service;
 import org.lxf.app.entity.ResourceCount;
 
 /**
- * 资源计数API服务
+ * 资源计数API接口Service
  *
  * @author lxf
  * @version 1.0

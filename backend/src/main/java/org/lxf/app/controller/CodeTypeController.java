@@ -4,47 +4,47 @@ import jakarta.annotation.Resource;
 import jakarta.validation.Valid;
 import org.lxf.app.common.response.PageResponse;
 import org.lxf.app.common.response.Response;
-import org.lxf.app.entity.Component;
+import org.lxf.app.entity.CodeType;
 import org.lxf.app.form.base.DeleteForm;
 import org.lxf.app.form.base.PageQueryForm;
 import org.lxf.app.form.base.UpdateForm;
-import org.lxf.app.service.ComponentService;
+import org.lxf.app.service.CodeTypeService;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
- * 组件API接口Controller
+ * 代码类型API接口Controller
  *
  * @author lxf
  * @version 1.0
- * @since 2025/9/15 19:31
+ * @since 2025/09/21 23:17
  */
 @RestController
-@RequestMapping("/component")
-public class ComponentController {
+@RequestMapping("/code/type")
+public class CodeTypeController {
     @Resource
-    private ComponentService componentService;
+    private CodeTypeService codeTypeService;
 
     @PostMapping("/query")
     public Response<PageResponse<?>> pageQuery(@RequestBody @Valid PageQueryForm pageQueryForm) {
-        return Response.ok(new PageResponse<>(componentService.basePageQuery(pageQueryForm, Component.class)));
+        return Response.ok(new PageResponse<>(codeTypeService.basePageQuery(pageQueryForm, CodeType.class)));
     }
 
     @PostMapping("/add")
     public Response<Object> add(@RequestBody Object object) {
-        return Response.ok(componentService.baseAdd(object, Component.class));
+        return Response.ok(codeTypeService.baseAdd(object, CodeType.class));
     }
 
     @PostMapping("/update")
     public Object update(@RequestBody @Valid UpdateForm updateForm) {
-        componentService.baseUpdate(updateForm, Component.class);
+        codeTypeService.baseUpdate(updateForm, CodeType.class);
         return Response.ok();
     }
 
     @PostMapping("/delete")
     public Object delete(@RequestBody @Valid DeleteForm deleteForm) {
-        return Response.ok(componentService.baseDelete(deleteForm, Component.class));
+        return Response.ok(codeTypeService.baseDelete(deleteForm, CodeType.class));
     }
 }

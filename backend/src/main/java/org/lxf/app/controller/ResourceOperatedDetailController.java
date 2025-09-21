@@ -5,9 +5,9 @@ import jakarta.validation.Valid;
 import org.lxf.app.common.response.PageResponse;
 import org.lxf.app.common.response.Response;
 import org.lxf.app.entity.ResourceOperatedDetail;
-import org.lxf.app.form.DeleteForm;
-import org.lxf.app.form.PageQueryForm;
-import org.lxf.app.form.UpdateForm;
+import org.lxf.app.form.base.DeleteForm;
+import org.lxf.app.form.base.PageQueryForm;
+import org.lxf.app.form.base.UpdateForm;
 import org.lxf.app.service.ResourceOperatedDetailService;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
- * 资源被操作记录API接口控制层
+ * 资源被操作记录API接口Controller
  *
  * @author lxf
  * @version 1.0

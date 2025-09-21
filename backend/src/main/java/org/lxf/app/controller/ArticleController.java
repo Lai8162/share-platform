@@ -5,20 +5,17 @@ import jakarta.validation.Valid;
 import org.lxf.app.common.response.PageResponse;
 import org.lxf.app.common.response.Response;
 import org.lxf.app.entity.Article;
-import org.lxf.app.entity.Component;
-import org.lxf.app.form.DeleteForm;
-import org.lxf.app.form.PageQueryForm;
-import org.lxf.app.form.UpdateForm;
+import org.lxf.app.form.base.DeleteForm;
+import org.lxf.app.form.base.PageQueryForm;
+import org.lxf.app.form.base.UpdateForm;
 import org.lxf.app.service.ArticleService;
-import org.lxf.app.service.ComponentService;
-import org.lxf.app.transform.vo.UserVO;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
- * 文章API接口控制层
+ * 文章API接口Controller
  *
  * @author lxf
  * @version 1.0

@@ -3,7 +3,7 @@ package org.lxf.app.service;
 import org.lxf.app.entity.ResourceOperatedDetail;
 
 /**
- * 资源被操作详情API服务
+ * 资源被操作详情API接口Service
  *
  * @author lxf
  * @version 1.0

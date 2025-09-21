@@ -7,7 +7,7 @@ import org.lxf.app.service.ArticleService;
 import org.springframework.stereotype.Service;
 
 /**
- * 文章API服务
+ * 文章API接口Service实现
  *
  * @author lxf
  * @version 1.0
