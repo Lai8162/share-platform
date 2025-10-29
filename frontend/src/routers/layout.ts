@@ -1,10 +1,16 @@
+import portal from './portal'
+
 export default [
-  {
-    path: '/lr',
-    component: () => import('@/layouts/left-right/Layout.vue'),
-  },
-  {
-    path: '/tb',
-    component: () => import('@/layouts/top-bottom/Layout.vue'),
-  },
+	{
+		path: '/admin',
+		name: 'admin',
+		component: () => import('@/layouts/admin/Layout.vue'),
+	},
+	{
+		path: '/portal',
+		name: 'portal',
+		component: () => import('@/layouts/portal/Layout.vue'),
+		redirect: '/portal/home',
+		children: portal,
+	},
 ]

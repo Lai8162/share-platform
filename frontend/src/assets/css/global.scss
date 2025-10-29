@@ -1,5 +1,8 @@
-$base-text-color: red;
+.text-link {
+	color: #222;
+}
 
-:root {
-  --base-text-color: #{$base-text-color};
+.text-link:focus {
+	color: #315efc;
+	text-decoration: underline;
 }

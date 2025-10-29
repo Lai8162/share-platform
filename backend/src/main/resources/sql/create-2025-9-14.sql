@@ -3,9 +3,33 @@ CREATE TABLE `article` (
   `name` varchar(255) DEFAULT NULL COMMENT '文章名称',
   `type` tinyint(4) DEFAULT NULL COMMENT '1-原创 2-外部分享链接',
   `content` text COMMENT '文章内容',
-  `creator_id` int(11) DEFAULT NULL,
+  `creator_id` bigint(20) DEFAULT NULL,
   `create_time` datetime DEFAULT NULL,
-  `modifier_id` int(11) DEFAULT NULL,
+  `modifier_id` bigint(20) DEFAULT NULL,
+  `modify_time` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+CREATE TABLE `code_share` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) DEFAULT NULL COMMENT '名称',
+  `content` text COMMENT '内容',
+  `type` bigint(20) DEFAULT NULL COMMENT '类型（外键：code_type）',
+  `description` text COMMENT '描述',
+  `creator_id` bigint(20) DEFAULT NULL,
+  `create_time` datetime DEFAULT NULL,
+  `modifier_id` bigint(20) DEFAULT NULL,
+  `modify_time` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+CREATE TABLE `code_type` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) DEFAULT NULL COMMENT '名称',
+  `description` text COMMENT '描述',
+  `creator_id` bigint(20) DEFAULT NULL,
+  `create_time` datetime DEFAULT NULL,
+  `modifier_id` bigint(20) DEFAULT NULL,
   `modify_time` datetime DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -15,16 +39,16 @@ CREATE TABLE `component` (
   `name` varchar(255) DEFAULT NULL COMMENT '组件名称',
   `type` tinyint(4) DEFAULT NULL COMMENT '组件类型：1-vue 2-其它（默认1）',
   `content` text COMMENT '组件内容',
-  `creator_id` int(11) DEFAULT NULL,
+  `creator_id` bigint(20) DEFAULT NULL,
   `create_time` datetime DEFAULT NULL,
-  `modifier_id` int(11) DEFAULT NULL,
+  `modifier_id` bigint(20) DEFAULT NULL,
   `modify_time` datetime DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 CREATE TABLE `resource_count` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `resource_id` int(11) DEFAULT NULL COMMENT '资源id',
+  `resource_id` bigint(20) DEFAULT NULL COMMENT '资源id',
   `view_count` bigint(20) DEFAULT NULL COMMENT '查看数',
   `like_count` bigint(20) DEFAULT NULL COMMENT '喜欢数',
   `collect_count` bigint(20) DEFAULT NULL COMMENT '收藏数',
@@ -40,9 +64,32 @@ CREATE TABLE `resource_operated_detail` (
   `type` tinyint(4) DEFAULT NULL COMMENT '资源被操作类型：1-查看 2-赞 3-收藏 4-分享 5-采纳/使用',
   `resource_id` bigint(20) DEFAULT NULL COMMENT '资源id',
   `user_id` bigint(20) DEFAULT NULL COMMENT '用户id',
-  `creator_id` int(11) DEFAULT NULL,
+  `creator_id` bigint(20) DEFAULT NULL,
   `create_time` datetime DEFAULT NULL,
-  `modifier_id` int(11) DEFAULT NULL,
+  `modifier_id` bigint(20) DEFAULT NULL,
+  `modify_time` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+CREATE TABLE `technical_feature_share` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) DEFAULT NULL COMMENT '名称',
+  `content` text COMMENT '内容',
+  `description` text COMMENT '描述',
+  `creator_id` bigint(20) DEFAULT NULL,
+  `create_time` datetime DEFAULT NULL,
+  `modifier_id` bigint(20) DEFAULT NULL,
+  `modify_time` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4;
+
+CREATE TABLE `technical_feature_type` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) DEFAULT NULL COMMENT '名称',
+  `description` text COMMENT '描述',
+  `creator_id` bigint(20) DEFAULT NULL,
+  `create_time` datetime DEFAULT NULL,
+  `modifier_id` bigint(20) DEFAULT NULL,
   `modify_time` datetime DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -51,9 +98,9 @@ CREATE TABLE `to_db_record` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
   `name` varchar(255) DEFAULT NULL COMMENT '解析名称（如没有设置，自动生成）',
   `content` text COMMENT '解析生成内容',
-  `creator_id` int(11) DEFAULT NULL,
+  `creator_id` bigint(20) DEFAULT NULL,
   `create_time` datetime DEFAULT NULL,
-  `modifier_id` int(11) DEFAULT NULL,
+  `modifier_id` bigint(20) DEFAULT NULL,
   `modify_time` datetime DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;

@@ -1,5 +1,5 @@
-import hasPermission from '@/directive/permission/has-permission'
-import hasRole from '@/directive/permission/has-role'
+import hasPermission from '@/directives/permission/has-permission'
+import hasRole from '@/directives/permission/has-role'
 
 function initDirective(app: any) {
   app.directive('hasRole', hasRole)

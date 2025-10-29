@@ -1,3 +1,9 @@
+<template>
+  <el-button icon="download" type="primary" plain>
+    {{ props.title }}
+  </el-button>
+</template>
+
 <script setup lang="ts">
 import { t } from '@/locales/i18n'
 
@@ -10,11 +16,5 @@ const props = withDefaults(
   },
 )
 </script>
-
-<template>
-  <el-button icon="download" type="primary" plain>
-    {{ props.title }}
-  </el-button>
-</template>
 
 <style scoped lang="scss"></style>

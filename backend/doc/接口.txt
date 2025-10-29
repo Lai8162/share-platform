@@ -1,0 +1,6 @@
+1、组件
+新增：/component/add
+删除：/component/delete
+更新：/component/update
+查询：/component/query
+热度最高的：/component/hot/query

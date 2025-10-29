@@ -8,6 +8,7 @@ import initPinia from './plugins/pinia-init'
 import initVueRouter from './plugins/vue-router-init'
 import 'virtual:windi.css'
 import '@/assets/css/root.css'
+import '@/assets/css/global.scss'
 import 'virtual:svg-icons-register'
 import 'element-plus/dist/index.css'
 

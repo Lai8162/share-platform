@@ -1,27 +1,33 @@
-<script setup lang="ts"></script>
-
 <template>
   <div class="left-right-layout">
     <el-container>
       <el-header>
-        <LeftRightHeader></LeftRightHeader>
+        <Header></Header>
       </el-header>
       <el-container>
         <el-aside width="150px">
-          <LeftRightAside></LeftRightAside>
+          <Aside></Aside>
         </el-aside>
         <el-container>
           <el-main>
-            <LeftRightContent></LeftRightContent>
+            <Content></Content>
           </el-main>
           <el-footer>
-            <LeftRightFooter></LeftRightFooter>
+            <Footer></Footer>
           </el-footer>
         </el-container>
       </el-container>
     </el-container>
   </div>
 </template>
+
+<script setup lang="ts">
+import Content from './Content.vue'
+import Footer from './Footer.vue'
+import Header from './Header.vue'
+import Aside from './Aside.vue';
+</script>
+
 
 <style scoped lang="scss">
 .left-right-layout {

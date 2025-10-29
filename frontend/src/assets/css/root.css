@@ -1,3 +1,11 @@
 :root {
   --primary-color: blue;
+  --header-color: rgb(225, 243, 216);
+  --footer-color: rgb(225, 243, 216);
+  --text-base-color: #222;
+  --text-link-color: #222;
+  /* 链接标题颜色 */
+  --text-link-focus-color: #315EFC;
+  /* 站点名称颜色 */
+  --title-color:  #315EFC;
 }

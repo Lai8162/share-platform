@@ -7,6 +7,7 @@ import axios from 'axios'
 import qs from 'qs'
 import { isBlob } from '@/utils/validate'
 import { saveAs } from 'file-saver'
+import { ElMessage, ElMessageBox, ElNotification, ElLoading } from 'element-plus'
 
 let downloadLoadingInstance: any
 

@@ -6,34 +6,34 @@ import { createSvgIconsPlugin } from 'vite-plugin-svg-icons'
 import WindiCSS from 'vite-plugin-windicss'
 
 export default defineConfig(({ mode }) => {
-  const env = loadEnv(mode, process.cwd(), '')
-  return {
-    define: {
-      env,
-    },
-    plugins: [
-      vue(),
-      WindiCSS(),
-      createSvgIconsPlugin({
-        iconDirs: [resolve(resolve(__dirname, 'src'), 'assets/icons/svgs')],
-        symbolId: 'icon-[dir]-[name]',
-      }),
-    ],
-    resolve: {
-      alias: {
-        '@': resolve(__dirname, './src'),
-      },
-    },
-    css: {
-      preprocessorOptions: {
-        scss: {
-          api: 'modern-compiler',
-          additionalData: `@use '@/assets/css/global.scss' as *; @use '@/assets/css/element.scss' as *;`,
-        },
-      },
-    },
-    server: {
-      port: 7001,
-    },
-  }
+	const env = loadEnv(mode, process.cwd(), '')
+	return {
+		define: {
+			env,
+		},
+		plugins: [
+			vue(),
+			WindiCSS(),
+			createSvgIconsPlugin({
+				iconDirs: [resolve(resolve(__dirname, 'src'), 'assets/icons/svgs')],
+				symbolId: 'icon-[dir]-[name]',
+			}),
+		],
+		resolve: {
+			alias: {
+				'@': resolve(__dirname, './src'),
+			},
+		},
+		css: {
+			preprocessorOptions: {
+				scss: {
+					api: 'modern-compiler',
+					additionalData: ``,
+				},
+			},
+		},
+		server: {
+			port: 7001,
+		},
+	}
 })
